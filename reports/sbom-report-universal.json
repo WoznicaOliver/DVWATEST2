@@ -1,0 +1,92 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:be658861-3918-4709-a7fb-cac2b675363a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-06-08T14:22:46.959Z",
+    "tools": [
+      {
+        "vendor": "cyclonedx",
+        "name": "cdxgen",
+        "version": "8.5.2"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Prabhu Subramanian",
+        "email": "prabhu@appthreat.com"
+      }
+    ]
+  },
+  "components": [
+    {
+      "publisher": "",
+      "group": "actions",
+      "name": "checkout",
+      "version": "v3",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:github/actions/checkout@v3",
+      "type": "application",
+      "bom-ref": "pkg:github/actions/checkout@v3"
+    },
+    {
+      "publisher": "",
+      "group": "",
+      "name": "github/codeql-action/init",
+      "version": "v2",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:github/github/codeql-action/init@v2",
+      "type": "library",
+      "bom-ref": "pkg:github/github/codeql-action/init@v2"
+    },
+    {
+      "publisher": "",
+      "group": "",
+      "name": "github/codeql-action/autobuild",
+      "version": "v2",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:github/github/codeql-action/autobuild@v2",
+      "type": "library",
+      "bom-ref": "pkg:github/github/codeql-action/autobuild@v2"
+    },
+    {
+      "publisher": "",
+      "group": "",
+      "name": "github/codeql-action/analyze",
+      "version": "v2",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:github/github/codeql-action/analyze@v2",
+      "type": "library",
+      "bom-ref": "pkg:github/github/codeql-action/analyze@v2"
+    },
+    {
+      "publisher": "",
+      "group": "ShiftLeftSecurity",
+      "name": "scan-action",
+      "version": "master",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:github/ShiftLeftSecurity/scan-action@master",
+      "type": "library",
+      "bom-ref": "pkg:github/ShiftLeftSecurity/scan-action@master"
+    },
+    {
+      "publisher": "",
+      "group": "",
+      "name": "github/codeql-action/upload-sarif",
+      "version": "v2",
+      "description": "",
+      "licenses": [],
+      "purl": "pkg:github/github/codeql-action/upload-sarif@v2",
+      "type": "library",
+      "bom-ref": "pkg:github/github/codeql-action/upload-sarif@v2"
+    }
+  ],
+  "services": [],
+  "dependencies": []
+}

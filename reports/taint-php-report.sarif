@@ -1,0 +1,1400 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "PHP Security Analysis",
+          "rules": [
+            {
+              "id": "245",
+              "help": {
+                "text": "Detected tainted HTML: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo.",
+                "markdown": "Detected tainted HTML: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+              },
+              "name": "TaintedHtml",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted HTML: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+              },
+              "helpUri": "https://psalm.dev/245",
+              "shortDescription": {
+                "text": "Detected tainted HTML: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+              }
+            },
+            {
+              "id": "274",
+              "help": {
+                "text": "Detected tainted text with possible quotes: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo.",
+                "markdown": "Detected tainted text with possible quotes: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+              },
+              "name": "TaintedTextWithQuotes",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted text with possible quotes: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+              },
+              "helpUri": "https://psalm.dev/274",
+              "shortDescription": {
+                "text": "Detected tainted text with possible quotes: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+              }
+            },
+            {
+              "id": "244",
+              "help": {
+                "text": "Detected tainted SQL: $_GET['username']\\n$user\\nconcat\\n$query\\ncall to mysqli_query.",
+                "markdown": "Detected tainted SQL: $_GET['username']\\n$user\\nconcat\\n$query\\ncall to mysqli_query."
+              },
+              "name": "TaintedSql",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted SQL: $_GET['username']\\n$user\\nconcat\\n$query\\ncall to mysqli_query."
+              },
+              "helpUri": "https://psalm.dev/244",
+              "shortDescription": {
+                "text": "Detected tainted SQL: $_GET['username']\\n$user\\nconcat\\n$query\\ncall to mysqli_query."
+              }
+            },
+            {
+              "id": "246",
+              "help": {
+                "text": "Detected tainted shell code: $_REQUEST['ip']\\ncall to trim\\ntrim#1\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec.",
+                "markdown": "Detected tainted shell code: $_REQUEST['ip']\\ncall to trim\\ntrim#1\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+              },
+              "name": "TaintedShell",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted shell code: $_REQUEST['ip']\\ncall to trim\\ntrim#1\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+              },
+              "helpUri": "https://psalm.dev/246",
+              "shortDescription": {
+                "text": "Detected tainted shell code: $_REQUEST['ip']\\ncall to trim\\ntrim#1\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+              }
+            },
+            {
+              "id": "256",
+              "help": {
+                "text": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header.",
+                "markdown": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header."
+              },
+              "name": "TaintedHeader",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header."
+              },
+              "helpUri": "https://psalm.dev/256",
+              "shortDescription": {
+                "text": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header."
+              }
+            },
+            {
+              "id": "257",
+              "help": {
+                "text": "Detected tainted cookie: $_POST['id']\\ncall to setcookie.",
+                "markdown": "Detected tainted cookie: $_POST['id']\\ncall to setcookie."
+              },
+              "name": "TaintedCookie",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted cookie: $_POST['id']\\ncall to setcookie."
+              },
+              "helpUri": "https://psalm.dev/257",
+              "shortDescription": {
+                "text": "Detected tainted cookie: $_POST['id']\\ncall to setcookie."
+              }
+            },
+            {
+              "id": "255",
+              "help": {
+                "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\nconcat\\ncall to file_get_contents.",
+                "markdown": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\nconcat\\ncall to file_get_contents."
+              },
+              "name": "TaintedFile",
+              "properties": {
+                "tags": [
+                  "Scan"
+                ],
+                "precision": "high"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\nconcat\\ncall to file_get_contents."
+              },
+              "helpUri": "https://psalm.dev/255",
+              "shortDescription": {
+                "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\nconcat\\ncall to file_get_contents."
+              }
+            }
+          ],
+          "version": "1.0.0-scan",
+          "fullName": "PHP Security Analysis"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "/opt/phpsast/vendor/bin/psalm",
+            "--report-show-info=false",
+            "--show-snippet=true",
+            "--taint-analysis",
+            "-m",
+            "--no-progress",
+            "--no-file-cache",
+            "--no-suggestions",
+            "--no-cache",
+            "--root=/app",
+            "--report=/app/reports/taint-php-report.json"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "/opt/phpsast/vendor/bin/psalm --report-show-info=false --show-snippet=true --taint-analysis -m --no-progress --no-file-cache --no-suggestions --no-cache --root=/app --report=/app/reports/taint-php-report.json",
+          "endTimeUtc": "2023-06-08T14:22:45Z",
+          "workingDirectory": {
+            "uri": "file:///home/oliverwoznica/Desktop/DVWA"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2023-06-08T14:22:45Z",
+          "workingDirectory": {
+            "uri": "file:///home/oliverwoznica/Desktop/DVWA"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 28,
+          "critical": 28,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted HTML: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\treturn $_COOKIE[ 'security' ];\n"
+                  },
+                  "startLine": 144
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/dvwa/includes/dvwaPage.inc.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\tif (isset($_COOKIE['security'])) {\n\t\treturn $_COOKIE[ 'security' ];\n"
+                  },
+                  "endLine": 144,
+                  "startLine": 143
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "6044ca56573f400d",
+            "scanFileHash": "e0bad27f503953a8"
+          },
+          "ruleId": "245",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted text with possible quotes: $_COOKIE['security']\\ndvwaSecurityLevelGet\\n$security\\nconcat\\nconcat\\ndvwaButtonHelpHtmlGet\\nconcat\\n$systemInfoHtml\\nconcat\\nconcat\\nconcat\\nconcat\\ncall to echo."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\treturn $_COOKIE[ 'security' ];\n"
+                  },
+                  "startLine": 144
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/dvwa/includes/dvwaPage.inc.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\tif (isset($_COOKIE['security'])) {\n\t\treturn $_COOKIE[ 'security' ];\n"
+                  },
+                  "endLine": 144,
+                  "startLine": 143
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "6044ca56573f400d",
+            "scanFileHash": "e0bad27f503953a8"
+          },
+          "ruleId": "274",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted SQL: $_GET['username']\\n$user\\nconcat\\n$query\\ncall to mysqli_query."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$user = $_GET[ 'username' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/brute/source/low.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get username\n\t$user = $_GET[ 'username' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "239c953e46422198",
+            "scanFileHash": "d03f8f7901c53b8f"
+          },
+          "ruleId": "244",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted HTML: $_GET['callback']\\n$callback\\nconcat\\nconcat\\nconcat\\ncall to echo."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$callback = $_GET['callback'];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/csp/source/jsonp.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"callback\", $_GET)) {\n\t$callback = $_GET['callback'];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "0876ba43b076148e",
+            "scanFileHash": "0573ab3ec42de375"
+          },
+          "ruleId": "245",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted text with possible quotes: $_GET['callback']\\n$callback\\nconcat\\nconcat\\nconcat\\ncall to echo."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$callback = $_GET['callback'];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/csp/source/jsonp.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"callback\", $_GET)) {\n\t$callback = $_GET['callback'];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "0876ba43b076148e",
+            "scanFileHash": "0573ab3ec42de375"
+          },
+          "ruleId": "274",
+          "ruleIndex": 1
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\ncall to trim\\ntrim#1\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = trim($_REQUEST[ 'ip' ]);\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/high.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = trim($_REQUEST[ 'ip' ]);\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "c5674f671fa62ccf",
+            "scanFileHash": "c82bba492a443d52"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\ncall to trim\\ntrim#1\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = trim($_REQUEST[ 'ip' ]);\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/high.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = trim($_REQUEST[ 'ip' ]);\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "c5674f671fa62ccf",
+            "scanFileHash": "c82bba492a443d52"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\n$target\\ncall to stripslashes\\nstripslashes#1\\n$target\\ncall to explode\\nexplode#2\\n$octet\\n$octet[3]\\nconcat\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "startLine": 8
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/impossible.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "endLine": 8,
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "30895ad1b09a591f",
+            "scanFileHash": "77e07c622f6e7073"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\n$target\\ncall to stripslashes\\nstripslashes#1\\n$target\\ncall to explode\\nexplode#2\\n$octet\\n$octet[3]\\nconcat\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "startLine": 8
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/impossible.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "endLine": 8,
+                  "startLine": 7
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "30895ad1b09a591f",
+            "scanFileHash": "77e07c622f6e7073"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/low.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "30895ad1b09a591f",
+            "scanFileHash": "f43b7347be9e247c"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/low.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "30895ad1b09a591f",
+            "scanFileHash": "f43b7347be9e247c"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/medium.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "30895ad1b09a591f",
+            "scanFileHash": "ead7a64ce5c4b8b7"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted shell code: $_REQUEST['ip']\\n$target\\ncall to str_replace\\nstr_replace#3\\n$target\\nconcat\\ncall to shell_exec."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/exec/source/medium.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$target = $_REQUEST[ 'ip' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "30895ad1b09a591f",
+            "scanFileHash": "ead7a64ce5c4b8b7"
+          },
+          "ruleId": "246",
+          "ruleIndex": 3
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\theader (\"location: \" . $_GET['redirect']);\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/open_redirect/source/high.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\tif (strpos($_GET['redirect'], \"info.php\") !== false) {\n\t\theader (\"location: \" . $_GET['redirect']);\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "b02e90750c5cf8af",
+            "scanFileHash": "fe9738ca403422a6"
+          },
+          "ruleId": "256",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\theader (\"location: \" . $_GET['redirect']);\n"
+                  },
+                  "startLine": 4
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/open_redirect/source/low.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"redirect\", $_GET) && $_GET['redirect'] != \"\") {\n\theader (\"location: \" . $_GET['redirect']);\n"
+                  },
+                  "endLine": 4,
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "b02e90750c5cf8af",
+            "scanFileHash": "bec92b6063ac5cb1"
+          },
+          "ruleId": "256",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted header: $_GET['redirect']\\nconcat\\ncall to header."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t\theader (\"location: \" . $_GET['redirect']);\n"
+                  },
+                  "startLine": 11
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/open_redirect/source/medium.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t} else {\n\t\theader (\"location: \" . $_GET['redirect']);\n"
+                  },
+                  "endLine": 11,
+                  "startLine": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "b02e90750c5cf8af",
+            "scanFileHash": "5e8e37b89456ab0b"
+          },
+          "ruleId": "256",
+          "ruleIndex": 4
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted SQL: $_REQUEST['id']\\n$id\\nconcat\\n$query\\ncall to mysqli_query."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_REQUEST[ 'id' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/sqli/source/low.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$id = $_REQUEST[ 'id' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "e3c8c652896cdacd",
+            "scanFileHash": "2e33967cccde7a0e"
+          },
+          "ruleId": "244",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted cookie: $_POST['id']\\ncall to setcookie."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\tsetcookie( 'id', $_POST[ 'id' ]);\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/sqli_blind/cookie-input.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if( isset( $_POST[ 'id' ] ) ) {\n\tsetcookie( 'id', $_POST[ 'id' ]);\n"
+                  },
+                  "endLine": 12,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "308f1db6f3146695",
+            "scanFileHash": "19e1a071e9dad4f4"
+          },
+          "ruleId": "257",
+          "ruleIndex": 5
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted SQL: $_COOKIE['id']\\n$id\\nconcat\\n$query\\ncall to mysqli_query."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_COOKIE[ 'id' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/sqli_blind/source/high.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$id = $_COOKIE[ 'id' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "910a7386a739e254",
+            "scanFileHash": "44d0dd9d0d8adad4"
+          },
+          "ruleId": "244",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted SQL: $_GET['id']\\n$id\\nconcat\\n$query\\ncall to mysqli_query."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "startLine": 5
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/sqli_blind/source/low.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t// Get input\n\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "endLine": 5,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "36e0a4ad4bbcd04c",
+            "scanFileHash": "9c9c24e99d57383b"
+          },
+          "ruleId": "244",
+          "ruleIndex": 2
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id       = $_GET[ 'id' ];\n"
+                  },
+                  "startLine": 14
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_help.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\tarray_key_exists (\"locale\", $_GET)) {\n\t$id       = $_GET[ 'id' ];\n"
+                  },
+                  "endLine": 14,
+                  "startLine": 13
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "5929aa0b212a8741",
+            "scanFileHash": "aead58cdad383474"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['locale']\\n$locale\\nconcat\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$locale = $_GET[ 'locale' ];\n"
+                  },
+                  "startLine": 16
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_help.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t$security = $_GET[ 'security' ];\n\t$locale = $_GET[ 'locale' ];\n"
+                  },
+                  "endLine": 16,
+                  "startLine": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "05793867e50cef3f",
+            "scanFileHash": "aead58cdad383474"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['security']\\n$security\\nconcat\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$security = $_GET[ 'security' ];\n"
+                  },
+                  "startLine": 13
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_source.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t$id       = $_GET[ 'id' ];\n\t$security = $_GET[ 'security' ];\n"
+                  },
+                  "endLine": 13,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "485e280b9e24f678",
+            "scanFileHash": "97a2174b00151523"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['security']\\n$security\\nconcat\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$security = $_GET[ 'security' ];\n"
+                  },
+                  "startLine": 13
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_source.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "\t$id       = $_GET[ 'id' ];\n\t$security = $_GET[ 'security' ];\n"
+                  },
+                  "endLine": 13,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "485e280b9e24f678",
+            "scanFileHash": "97a2174b00151523"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_source_all.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"id\", $_GET)) {\n\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "endLine": 12,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "36e0a4ad4bbcd04c",
+            "scanFileHash": "845c11ad1ae6963d"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_source_all.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"id\", $_GET)) {\n\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "endLine": 12,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "36e0a4ad4bbcd04c",
+            "scanFileHash": "845c11ad1ae6963d"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_source_all.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"id\", $_GET)) {\n\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "endLine": 12,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "36e0a4ad4bbcd04c",
+            "scanFileHash": "845c11ad1ae6963d"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        },
+        {
+          "message": {
+            "markdown": "",
+            "text": "Detected tainted file handling: $_GET['id']\\n$id\\nconcat\\ncall to file_get_contents."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": "\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "startLine": 12
+                },
+                "artifactLocation": {
+                  "uri": "file:///home/oliverwoznica/Desktop/DVWA/vulnerabilities/view_source_all.php"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": "if (array_key_exists (\"id\", $_GET)) {\n\t$id = $_GET[ 'id' ];\n"
+                  },
+                  "endLine": 12,
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "HIGH",
+            "issue_severity": "CRITICAL",
+            "issue_tags": {}
+          },
+          "baselineState": "new",
+          "partialFingerprints": {
+            "scanPrimaryLocationHash": "36e0a4ad4bbcd04c",
+            "scanFileHash": "845c11ad1ae6963d"
+          },
+          "ruleId": "255",
+          "ruleIndex": 6
+        }
+      ],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "07ffdf96-bf36-41b5-8a2c-742df4088fd3"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "master",
+          "repositoryUri": "",
+          "revisionId": ""
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "07ffdf96-bf36-41b5-8a2c-742df4088fd3",
+      "runGuid": "156e34a8-118a-44d0-9330-c6785c22c869"
+    }
+  ]
+}
