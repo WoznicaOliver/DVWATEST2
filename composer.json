@@ -73,11 +73,6 @@
             ]
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Composer\\": "src/Composer/"
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "Composer\\Test\\": "tests/Composer/Test/"
