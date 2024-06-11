@@ -16,16 +16,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Install cyclonedx-cli
-        run: npm install -g @cyclonedx/cyclonedx-cli
+      - name: Install CycloneDX CLI
+        run: |
+          wget https://github.com/CycloneDX/cyclonedx-cli/releases/download/v0.16.0/cyclonedx-linux-x64 -O cyclonedx
+          chmod +x cyclonedx
+          sudo mv cyclonedx /usr/local/bin/
 
       - name: Generate SBOM
-        run: cyclonedx-cli --output sbom.xml
+        run: cyclonedx -o sbom.xml
 
       - name: Upload SBOM artifact
         uses: actions/upload-artifact@v3
