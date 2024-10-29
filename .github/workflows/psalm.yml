@@ -1,36 +1,41 @@
-name: Psalm Analysis
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Psalm Security Scan
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '00 12 * * 6'
+
+permissions:
+  contents: read
 
 jobs:
-  psalm:
+  php-security:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.0' # Specify your PHP version here
-        extensions: soap   # Ensure SOAP extension is enabled
+      - name: Install PHP GD extension
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php-gd
 
-    - name: Install dependencies
-      run: composer install
+      - name: Psalm Security Scan
+        uses: psalm/psalm-github-security-scan@f3e6fd9432bc3e44aec078572677ce9d2ef9c287
+        with:
+          composer_ignore_platform_reqs: true
 
-    - name: Run Psalm
-      run: vendor/bin/psalm --no-diff --debug-by-line --output-format=checkstyle --report=psalm-report.sarif
-
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: psalm-report.sarif
-
-        #test
+      - name: Upload Security Analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
