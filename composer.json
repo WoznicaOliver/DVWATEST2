@@ -8,18 +8,7 @@
         "autoload"
     ],
     "require": {
-        "php": "^8.3",
-        "composer/ca-bundle": "^1.0",
-        "composer/class-map-generator": "^1.0",
-        "composer/metadata-minifier": "^1.0",
-        "composer/semver": "^3.2.5",
-        "composer/spdx-licenses": "^1.5.7",
-        "composer/xdebug-handler": "^2.0.2 || ^3.0.3",
-        "guzzlehttp/guzzle": "^7.8",
-        "mpdf/mpdf": "^8.2",
-        "league/oauth2-client": "^2.7",
-        "aws/aws-sdk-php": "^3.321"
-
+        "php": "^8.3"
     },
     "config": {
         "platform": {
