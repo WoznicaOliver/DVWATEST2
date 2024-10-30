@@ -23,11 +23,14 @@ jobs:
       - name: Set up PHP with GD extension
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0' # Specify the PHP version you need
+          php-version: '8.3' # Specify the PHP version you need
           extensions: gd # Install GD extension
 
+      - name: Verify GD Extension
+        run: php -m | grep gd # Check if GD extension is loaded
+
       - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress --no-suggest --ignore-platform-req=ext-gd
 
       - name: Psalm Security Scan
         uses: psalm/psalm-github-security-scan@f3e6fd9432bc3e44aec078572677ce9d2ef9c287
