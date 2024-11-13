@@ -9,6 +9,7 @@
     ],
     "require": {
         "php": "^8.3",
+        "ext-gd": "*",
         "composer/ca-bundle": "^1.0",
         "composer/class-map-generator": "^1.0",
         "composer/metadata-minifier": "^1.0",
