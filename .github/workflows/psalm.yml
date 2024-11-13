@@ -6,13 +6,13 @@ on:
     - cron: '00 12 * * 6'
 
 permissions:
-  contents: read
+  contents: write  # Enable write permissions to push updates
 
 jobs:
   php-security:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       security-events: write
       actions: read
 
@@ -26,13 +26,17 @@ jobs:
           php-version: '8.0'
           extensions: gd
 
-      - name: Verify GD Extension
+      - name: Regenerate composer.lock
         run: |
-          php -m | grep gd || echo "GD extension not found"
-          php -r "extension_loaded('gd') ? exit(0) : exit(1);"
+          composer update --lock
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add composer.lock
+          git commit -m "Update composer.lock file with GD extension requirement"
+          git push
 
       - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest --ignore-platform-req=ext-gd
+        run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Psalm Security Scan
         uses: psalm/psalm-github-security-scan@f3e6fd9432bc3e44aec078572677ce9d2ef9c287
