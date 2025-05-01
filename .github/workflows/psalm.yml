@@ -2,7 +2,7 @@ name: Psalm Security Scan
 
 on:
   push:
-    branches: main
+    branches: master
 
 permissions:
   contents: write  # Enable write permissions to push updates
