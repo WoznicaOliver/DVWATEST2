@@ -1,9 +1,8 @@
 name: Psalm Security Scan
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '00 12 * * 6'
+  push:
+    branches: main
 
 permissions:
   contents: write  # Enable write permissions to push updates
@@ -42,6 +41,9 @@ jobs:
         uses: psalm/psalm-github-security-scan@f3e6fd9432bc3e44aec078572677ce9d2ef9c287
         with:
           composer_ignore_platform_reqs: true
+
+      - name: Run Python Script        
+        run: python Psalm_SARIF_Mapper.py results.sarif
 
       - name: Upload Security Analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v2
