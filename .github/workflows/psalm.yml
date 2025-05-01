@@ -1,3 +1,9 @@
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
 name: Psalm Security Scan
 
 on:
@@ -5,36 +11,28 @@ on:
     branches: master
 
 permissions:
-  contents: write  # Enable write permissions to push updates
+  contents: read
 
 jobs:
   php-security:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      security-events: write
-      actions: read
+      contents: read # for actions/checkout to fetch code
+      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
+      actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up PHP with GD extension
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          extensions: gd
-
-      - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
-
+      - name: Install PHP GD extension
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php-gd
       - name: Psalm Security Scan
         uses: psalm/psalm-github-security-scan@f3e6fd9432bc3e44aec078572677ce9d2ef9c287
         with:
           composer_ignore_platform_reqs: true
-
-      - name: Run Python Script        
-        run: python Psalm_SARIF_Mapper.py results.sarif
 
       - name: Upload Security Analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v2
