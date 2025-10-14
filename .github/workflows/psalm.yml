@@ -39,12 +39,6 @@ jobs:
         uses: actions/setup-python@v4.9.1
         with:
           python-version: '3.13'
-
-      #- name: Remove MPDF
-       # run: sed -i '/mpdf\/mpdf/d' composer.json
-
-      - name: Remove Composer Lock
-        run: rm composer.lock
         
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
