@@ -9,13 +9,17 @@
     findUnusedBaselineEntry="false"
     findUnusedPsalmSuppress="false"
     scanAutoloadFiles="false"
+    processAutoloadFiles="false"
 >
     <projectFiles>
-        <directory name="vulnerabilities" />
+        <directory name="database" />
+        <directory name="docs" />
+        <directory name="dvwa" />
+        <directory name="hackable" />
+        <directory name="config" />
         
         <ignoreFiles>
-            <directory name="vendor" />
-            <directory name="tests" />
+            <directory name="vulnerabilities" />
         </ignoreFiles>
     </projectFiles>
 
