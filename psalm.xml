@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<psalm
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    errorLevel="3"
+    autoloader="vendor/autoload.php"
+    findUnusedCode="false"
+    findUnusedVariablesAndParams="false"
+    findUnusedBaselineEntry="false"
+    findUnusedPsalmSuppress="false"
+    scanAutoloadFiles="false"
+>
+    <projectFiles>
+        <directory name="vulnerabilities" />
+        
+        <ignoreFiles>
+            <directory name="vendor" />
+            <directory name="tests" />
+            <directory name="storage" />
+        </ignoreFiles>
+    </projectFiles>
+
+</psalm>
+
+
+
+
