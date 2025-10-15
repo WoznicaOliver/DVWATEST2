@@ -10,6 +10,8 @@
     findUnusedPsalmSuppress="false"
     scanAutoloadFiles="false"
     processAutoloadFiles="false"
+    useDocblockTypes="false"
+>
 >
     <issueHandlers>
         <DocblockParse errorLevel="suppress" />
