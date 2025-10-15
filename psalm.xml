@@ -17,14 +17,13 @@
         <directory name="dvwa" />
         <directory name="hackable" />
         <directory name="config" />
-        
-        <ignoreFiles>
-            <directory name="vulnerabilities" />
-        </ignoreFiles>
     </projectFiles>
 
+    <ignoreFiles>
+        <directory name="vulnerabilities" />
+    </ignoreFiles>
+
+    <ignoreIssueTypes>
+        <issueType>DocblockParse</issueType>
+    </ignoreIssueTypes>
 </psalm>
-
-
-
-
