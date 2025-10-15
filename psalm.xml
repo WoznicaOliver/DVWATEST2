@@ -11,9 +11,9 @@
     scanAutoloadFiles="false"
     processAutoloadFiles="false"
 >
-    <ignoreIssueTypes>
-        <issueType>DocblockParse</issueType>
-    </ignoreIssueTypes>
+    <issueHandlers>
+        <DocblockParse errorLevel="suppress" />
+    </issueHandlers>
     
     <projectFiles>
         <directory name="vulnerabilities" />
