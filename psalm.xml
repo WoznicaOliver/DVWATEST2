@@ -13,9 +13,6 @@
     useDocblockTypes="false"
 >
 >
-    <issueHandlers>
-        <DocblockParse errorLevel="suppress" />
-    </issueHandlers>
     
     <projectFiles>
         <directory name="vulnerabilities" />
