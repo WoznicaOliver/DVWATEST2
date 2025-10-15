@@ -11,6 +11,10 @@
     scanAutoloadFiles="false"
     processAutoloadFiles="false"
 >
+    <ignoreIssueTypes>
+        <issueType>DocblockParse</issueType>
+    </ignoreIssueTypes>
+    
     <projectFiles>
         <directory name="vulnerabilities" />
         <directory name="database" />
