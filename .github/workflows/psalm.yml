@@ -47,7 +47,7 @@ jobs:
         run: composer require --dev vimeo/psalm
         
       - name: Run Psalm Security Scan
-        run: vendor/bin/psalm --config=psalm.xml --verbose --show-info=true --output-format=sarif --report=psalm.sarif --taint-analysis
+        run: vendor/bin/psalm --config=psalm.xml --stats --show-info=true --output-format=sarif --report=psalm.sarif --taint-analysis
 
       - name: Run Python Script        
         run: python Psalm_SARIF_Mapper.py psalm.sarif
